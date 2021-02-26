@@ -17,20 +17,21 @@
 
 <body>
 	<div>
-		<div class="new-question-button-div">
-			<button onclick="window.location.href='forum/question'" class="new-question-button">New Question</button>
+		<div>
+			<div class="new-question-button-div">
+				<button onclick="window.location.href='forum/question'" class="new-question-button">New Question</button>
+			</div>
+			
+			<div style="text-align:center;">
+				{{#each questions}}
+				<button class="forum_card"><div>
+					<p class="forum_card_title">{{title}}</p>
+					<div class="forum_card_class">{{class}}</div>
+					<p class="forum_card_op">by {{op}}</p>
+				</div></button>
+				{{/each}}
+			</div>
 		</div>
-		
-		<div style="text-align:center;">
-			{{#each questions}}
-			<button class="forum_card"><div>
-				<p class="forum_card_title">{{title}}</p>
-				<div class="forum_card_class">{{class}}</div>
-				<p class="forum_card_op">by {{op}}</p>
-			</div></button>
-			{{/each}}
-		</div>
-	</div>
 		
 		<nav class = "navigationbar">
 			<a href="/" class = "nav_bar">
@@ -48,5 +49,14 @@
 				<span class="navBar_text">Forum</span>
 			</a>
 		</nav>
+	</div>
+
+	<script>
+		$(window).ready (function() {
+			if (performance.navigation.type == 2) {
+				location.reload (true);
+			}
+		})
+	</script>
 </body>
 </html>

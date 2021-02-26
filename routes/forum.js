@@ -40,6 +40,8 @@ exports.uploading = function(req, res){
 		passage = req.query.passage;
 	}
 	var name = "me";
+
+	/* Question object for post. */
 	var questionPost = {
 			"question": question,
 			"class": className,
@@ -47,8 +49,16 @@ exports.uploading = function(req, res){
 			"passage": passage,
 			"name": name
 	};
+	/* Post object for forum. */
+	var postDetail = {
+		"title": question,
+		"class": className,
+		"op": "😊me"
+    }
 
 	/* Push question to database. */
+	forum_data.questions.push(postDetail);
+	console.log (forum_data);  // debug msg
 	res.render('forum_post', questionPost);  // update data
 };
 
