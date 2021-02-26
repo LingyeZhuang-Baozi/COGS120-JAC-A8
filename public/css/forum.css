@@ -46,10 +46,11 @@
 }
 
 .forum_card_title {
+  width: 100%;
   margin: 5px;
   font-size: 18px;
   line-height: 22px;
-  float: left;
+  text-align: left;
 }
 
 .forum_card_class {
