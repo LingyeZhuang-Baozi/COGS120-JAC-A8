@@ -55,6 +55,9 @@ app.get('/upload_url', upload.url);
 app.get('/upload_scan', upload.scan);
 app.get('/upload_file', upload.file);
 app.get('/upload_success', upload.success)
+app.get('/post', forum.viewPost);
+app.get('/newpost', forum.uploading);
+//app.get('/post/uploadC', forum.commenting);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));

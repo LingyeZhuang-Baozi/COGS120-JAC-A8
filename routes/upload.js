@@ -2,7 +2,7 @@
 /*
  * Get upload page.
  */
-var class_data = require('../JSON/class_data.json');
+var class_data = require('../JSON/library_data.json');
 exports.view = function(req, res){
   res.render('upload', class_data);
 };

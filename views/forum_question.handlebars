@@ -3,48 +3,78 @@
 	<title>Ask question</title>
 	<meta charset="utf-8">
 	<meta name="viewpoint" content="width=device-width, intitial-scale=1.0">
+	<script src="../js/jquery-1.11.0.js"></script>
 	<script src="../js/bootstrap.js"></script>
 	<!--<link href="../css/bootstrap.css" rel="stylesheet">
 	<link href="../css/bootstrap-theme.css" rel="stylesheet">-->
 	<link href="../css/forum.css" rel="stylesheet">
-
 </head>
 
 <body>
 <div>
-	<script>
-		function goBack() {
-  			window.history.back();
-		}
-	</script>
-	<button onclick="goBack()" class="back-button"><</button>
-	<div class="question_page">
-		<div class="enter-question">
-			<p style="margin:10px;">Question:</p>
+	<!-- Back button. -->
+	<div style="position:fixed; top:0; margin-top:10px">
+		<script>
+			function goBack() {
+  				window.history.back();
+			}
+		</script>
+		<button onclick="goBack()" class="back-button"><</button>
+	</div>
+
+	<div style="margin:80px auto;"><div class="question_page">
+		<form id="questionForm" role="form" method="GET" action="/newpost">
+		<!-- Question enter box. -->
+		<div class="enter_question_div">
+			<textarea class="enter_question" id="question" name="question" placeholder="Enter question" required></textarea>
 		</div>
-		<div class="question_options">
-			<p style="margin:5px;">
-				Class: <span class="question_selected">COGS 100</span>
-				<button class="option_button">></button>
-			</p>
+
+		<!-- Options for specifying question. -->
+		<div class="question_options"><!-- class -->
+			<label for="className">Class:</label>
+			<select class="option_box" id="className" name="className" required>
+				<option disabled selected value>
+					--- choose class ----------------------------------------
+				</option>
+				{{#each classname}}
+				<option value = "{{class}}">{{class}}</option>
+				{{/each}}
+			</select>
 		</div>
-		<div class="question_options">
-			<p style="margin:5px;">
-				Reading: <span class="question_selected">Distributed Cognition</span>
-				<button class="option_button">></button>
-			</p>
+		<div class="question_options"><!-- reading title -->
+			<label for="className">Reading:</label>
+			<select class="option_box" id="readingName" name="readingName" required>
+				<option disabled selected value>
+					--- choose reading --------------------------------------
+				</option>
+				{{#each readings}}
+				<option value = "{{title}}">{{title}}</option>
+				{{/each}}
+			</select>
 		</div>
-		<div class="question_options">
-			<p style="margin:5px;">
+		<div class="question_options"><!-- attatched passage -->
+			<!--p style="margin:5px;">
 				Passage (optional): <br><span class="question_selected" style="font-size:15px;">For example, distributed cognition in the libr...</span>
 				<button class="option_button">></button>
-			</p>
+			</p>-->
+			<label for="passage">Passage (optional):</label>
+			<p id="attatched_passage"></p>
 		</div>
 		<div class="question_options" style="margin-bottom:20px"></div>
 		<div style="text-align:center;">
 			<button onclick="goBack()" class="new-question-button" style="width:145px;">↵Cancel</button>
-			<button class="new-question-button" style="width:145px; margin-left:20%">↑ Post</button>
-		</div>
-	</div>
+			<!-- <button onclick="window.location.href='/uploadQ'" class="new-question-button" style="width:145px; margin-left:20%">↑ Post</button> -->
+			<input type="submit" id="submitBtn" class="new-question-button" style="width:145px; margin-left:20%" value="↑ Post"></input>
+		</div></form>
+	</div></div>
+
+	<script>
+		// Disable enter in question input box.
+		$(".enter-question").keypress (function (e) {
+			if (e.which == '13') {
+				e.preventDefault();
+			}
+		})
+	</script>
 </body>
 </html>
