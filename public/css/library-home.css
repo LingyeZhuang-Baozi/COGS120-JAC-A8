@@ -89,6 +89,7 @@
 	margin-top: 10px;
 	width: 45px;
 	height: 45px;
+	border-width: 1px;
 	border-radius: 50%;
 	cursor: pointer;
 }

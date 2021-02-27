@@ -27,13 +27,13 @@
 	<div class="fixed_header">
 		<div style="float:right;">
 			<!-- Highlight buttons. -->
-			<button onclick="" class= "highlight-icon">
+			<button id="highlighter" class= "highlight-icon">
 				<span class="material-icons">edit</span><br>
 				<span>highlighter</span>
 			</button>
-			<button class="hlButton hlcolor1"></button>
-			<button class ="hlButton hlcolor2"></button>
-			<button class ="hlButton hlcolor3"></button>
+			<button id="color1" class="hlButton hlcolor1"></button>
+			<button id="color2" class ="hlButton hlcolor2"></button>
+			<button id="color3" class ="hlButton hlcolor3"></button>
 			<!-- Forum button. -->
 			<button onclick="window.location.href='../forum/question'" class="forum-icon">
 				<span class="material-icons">forum</span><br>
@@ -75,10 +75,13 @@ Participant observations help the researcher decide which questions are relevant
 			$("p").mouseup(highlighter);
 			/* ↓ Touch screen trial. */
 			$("p").touchend(highlighter);
+			$("#highlighter").click(highlight_on_off);
+			$(".hlButton").click(highlight_color);
 		}
 		function goBack() {
   			window.history.back();
 		}
+		var hlcolor = "#FAFC43";  // default color: yellow
 		var selected_text;
 		function highlighter (e) {
 			console.log("highlighter function");
@@ -89,11 +92,36 @@ Participant observations help the researcher decide which questions are relevant
 				var range = selected_text.getRangeAt(0);
 				var content = range.extractContents();
 				var highlighter = document.createElement("span");
-				highlighter.style.cssText = "background-color:yellow;";
+				highlighter.style.cssText = "background-color:"+hlcolor+";";
 				highlighter.appendChild(content);
 				range.insertNode(highlighter);
 			}
 			console.log(selected_text.toString());
+		}
+		function highlight_on_off () {
+			console.log ("toggle highlighter");
+			$(window).toggle (
+				function() {
+					$(".hlButtom").css("border-width: 1px;");
+					$(this).css("color: #35C6CF;")
+					$(this).closest(".hlcolor1").css("border-width: 3px;");
+				},
+				function() {
+					$(".hlButtom").css("border-width: 1px;");
+				}
+			)
+		}
+		function highlight_color (color) {
+			console.log ("highlighter set color");
+			$(".hlButtom").css("border-width: 1px;");
+			$(this).css("border-width: 3px;");
+			if ($(this).attr("id") == "color1") {
+				hlcolor = "#FAFC43";
+			} else if ($(this).attr("id") == "color2") {
+				hlcolor = "#B3E9FA";
+			} else if ($(this).attr("id") == "color3") {
+				hlcolor = "#A2FBA4";
+			}
 		}
 		//$("p").click(function() {
   			//$(this).css('background-color',"#A2FBA4");
