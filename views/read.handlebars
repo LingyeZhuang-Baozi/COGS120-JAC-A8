@@ -72,6 +72,7 @@ Participant observations help the researcher decide which questions are relevant
 		})
 		function initializePage(){
 			console.log("initialize page");
+			$("p").ontouchend(touch_screen_highlight);
 		}
 		function goBack() {
   			window.history.back();
@@ -92,22 +93,21 @@ Participant observations help the researcher decide which questions are relevant
 			highlighter.appendChild(content);
 			range.insertNode(highlighter);
 		})
-		/* ↓ Touch screen trail. (failed) */
-		$("p").touchstart (function() {
-			console.log("debug! DOWN (touch screen)");
+		/* ↓ Touch screen trail. */
+		function touch_screen_highlight (e) {
+			console.log("debug! touch screen highlighter");
 			selected_text = "";
-		})
-		$("p").touchend (function() {
-			console.log("debug! UP (touch screen)");
-			selected_text = window.getSelection();
-			console.log(selected_text.toString());
-			var range = selected_text.getRangeAt(0);
-			var content = range.extractContents();
-			var highlighter = document.createElement("span");
-			highlighter.style.cssText = "background-color:yellow;";
-			highlighter.appendChild(content);
-			range.insertNode(highlighter);
-		})
+			if (window.getSelection()) {
+				selected_text = window.getSelection();
+				console.log(selected_text.toString());
+				var range = selected_text.getRangeAt(0);
+				var content = range.extractContents();
+				var highlighter = document.createElement("span");
+				highlighter.style.cssText = "background-color:yellow;";
+				highlighter.appendChild(content);
+				range.insertNode(highlighter);
+			}
+		}
 		//$("p").click(function() {
   			//$(this).css('background-color',"#A2FBA4");
 		//});
