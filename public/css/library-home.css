@@ -96,11 +96,17 @@
 .hlcolor1{ /* yellow */
 	background-color: #FAFC43;
 }
-.hlcolor2 { /* Blue */
+.hlcolor2 { /* blue */
 	background-color: #B3E9FA;
 }
-.hlcolor3 { /*green */
+.hlcolor3 { /* green */
 	background-color: #A2FBA4;
+}
+.hlcolor0 { /* clear highlight */
+	background-color: none;
+	border: dashed;
+	border-width: 1px;
+	vertical-align: top;
 	margin-right: 5vw;
 }
 .hlbutton_chosen {
