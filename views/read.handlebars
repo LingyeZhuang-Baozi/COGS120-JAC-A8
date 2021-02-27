@@ -8,7 +8,7 @@
 
 	<!-- jQuery and javascripts -->
 	<script src="../js/jquery-1.11.0.js"></script>
-	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+	<script src="../js/jquery mobile 1.4.5.js"></script>
 	<script src="../js/bootstrap.js"></script>
 
 	<!-- Import CSS style -->
@@ -25,28 +25,27 @@
 <body style="margin:0;">
 	<div>
 	<div class="fixed_header">
-		<a href="" class= "highlight-icon">
-			<span style= "position: fixed;"class="material-icons">edit</span>
-			<span class="highlight-icon_text"></span>
-		</a>
+		<div style="float:right;">
+			<!-- Highlight buttons. -->
+			<button onclick="" class= "highlight-icon">
+				<span class="material-icons">edit</span><br>
+				<span>highlighter</span>
+			</button>
+			<button class="hlButton hlcolor1"></button>
+			<button class ="hlButton hlcolor2"></button>
+			<button class ="hlButton hlcolor3"></button>
+			<!-- Forum button. -->
+			<button onclick="window.location.href='../forum/question'" class="forum-icon">
+				<span class="material-icons">forum</span><br>
+				<span>Forum</span>
+			</button>
+		</div>
 	</div>
-	<div style = "position:fixed; top: 23; right:250">
-		<button class=" hlButton1"></button>
-		<button class =" hlButton2"></button>
-		<button class ="hlButton3"></button>
-
-	</div>
-	<div style= "position: fixed; top: 0; right:0;">
-		<a href="/forum/question" class = "forum-icon forum-icon--active">
-			<span class="material-icons">forum</span>		 
-			<span class="forum-icon_text">Forum</span>
-		</a>
-
-	</div>
-
+	<!-- Back button. -->
 	<div style="position:fixed; top:0;">
 		<button onclick="goBack()" class="back-button"><</button>
 	</div>
+
 	<div class="word-content" style="margin-top:100px">
 		<h2> COGS120 Reading 1 <br><b> Participant Observation </b><br> </h2>
 		<p style = "font-size:25px;text-align:left;margin-top:25px;">
