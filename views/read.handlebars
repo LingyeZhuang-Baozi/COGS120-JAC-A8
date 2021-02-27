@@ -72,7 +72,7 @@ Participant observations help the researcher decide which questions are relevant
 		})
 		function initializePage(){
 			console.log("initialize page");
-			$("p").ontouchend(touch_screen_highlight);
+			$("p").on("tap", touch_screen_highlight);
 		}
 		function goBack() {
   			window.history.back();
@@ -93,7 +93,7 @@ Participant observations help the researcher decide which questions are relevant
 			highlighter.appendChild(content);
 			range.insertNode(highlighter);
 		})
-		/* ↓ Touch screen trail. */
+		/* ↓ Touch screen trial. */
 		function touch_screen_highlight (e) {
 			console.log("debug! touch screen highlighter");
 			selected_text = "";
