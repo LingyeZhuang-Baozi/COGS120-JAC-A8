@@ -24,7 +24,7 @@
 
 <body style="margin:0;">
 	<div>
-	<div class="fixed_header">
+	<div class="fixed_header unselectable">
 		<div style="float:right;">
 			<!-- Highlight buttons. -->
 			<button id="highlighter" class= "highlight-icon">
@@ -43,13 +43,13 @@
 		</div>
 	</div>
 	<!-- Back button. -->
-	<div style="position:fixed; top:0;">
+	<div class="unselectable" style="position:fixed; top:0;">
 		<button onclick="goBack()" class="back-button"><</button>
 	</div>
 
 	<div class="word-content" style="margin-top:100px">
-		<h2> COGS120 Reading 1 <br><b> Participant Observation </b><br> </h2>
-<p style = "white-space:pre-wrap; font-size:25px; text-align:left; margin-top:25px;">Jill is a researcher at a local university. She has just been tasked with studying how technology is being used in foreign language classrooms to enhance student learning. Though Jill is optimistic about her project, she has no idea how she is going to conduct her study. After speaking to her colleagues, Jill decides that it would be best for her to use participant observation to collect her research data. So what exactly is participant observation?
+		<h2 class="unselectable"> COGS120 Reading 1 <br><b> Participant Observation </b><br> </h2>
+<p class="reading_passage">Jill is a researcher at a local university. She has just been tasked with studying how technology is being used in foreign language classrooms to enhance student learning. Though Jill is optimistic about her project, she has no idea how she is going to conduct her study. After speaking to her colleagues, Jill decides that it would be best for her to use participant observation to collect her research data. So what exactly is participant observation?
 
 Participant observation is a qualitative research method in which the researcher not only observes the research participants, but also actively engages in the activities of the research participants. This requires the researcher to become integrated into the participants' environment while also taking objective notes about what is going on. Most researchers who conduct participant observations take on the role that they are interested in studying. In Jill's case, she might enroll in an actual foreign language course, complete all assigned homework and classwork, and attend field trips just as any regular student enrolled in the class would. Jill would also have informal conversations with other students in the class and the teacher. Jill would keep a detailed record of all assignments and take detailed notes about what she observes and what happened during her encounters with her classmates and teachers. Jill would also keep notes about technology usage, classroom norms and expectations, and any other information that she finds useful.
 
@@ -92,13 +92,13 @@ Participant observations help the researcher decide which questions are relevant
 				var range = selected_text.getRangeAt(0);
 				var content = document.createTextNode(selected_text.toString());
 				var highlighter = document.createElement("span");
-				highlighter.style.cssText = "background-color:"+hlcolor+";";
+				highlighter.style.backgroundColor = hlcolor;
 				range.extractContents();
 				highlighter.appendChild(content);
 				range.insertNode(highlighter);
 			}
 			console.log(selected_text.toString());
-		}
+		}  // Bug 1: can't erase within highlight. Bug 2: can't highlight when releasing mouse out of text box.
 		function highlight_on_off () {
 			console.log ("toggle highlighter");
 			$(window).toggle (
