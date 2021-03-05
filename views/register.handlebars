@@ -7,6 +7,8 @@
 	<meta name="viewpoint" content="width=device-width, intitial-scale=1.0">
 	<script src="js/jquery-1.11.0.js"></script>
 	<script src="js/bootstrap.js"></script>
+	{{> facebook}}
+	<script src="../js/facebook.js"></script>
 	<!--<link href="css/bootstrap.css" rel="stylesheet">
 	<link href="css/bootstrap-theme.css" rel="stylesheet">-->
 	<link href="css/forum.css" rel="stylesheet">
@@ -51,6 +53,10 @@
 		    </div>
 			<input type="submit" id="submitBtn" class="login_button" value="Register"></input>
 		</form>
+
+		<div class="facebookLogin">
+		<fb:login-button scope="public_profile,email" onlogin="checkLoginState();"><b>Register Through Facebook</b></fb:login-button> </div>
+
 		<div class="bottom_text"><p>Have an account? <a href="/login"><b>Login Here</b></a></p></div>
 	</div>
 </body>
