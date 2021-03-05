@@ -24,10 +24,10 @@
 			
 			<div style="text-align:center;">
 				{{#each questions}}
-				<button class="forum_card"><div>
-					<p class="forum_card_title">{{title}}</p>
+				<button onclick="window.location.href='/post?ID={{questionID}}'" class="forum_card"><div>
+					<p class="forum_card_title">{{question}}</p>
 					<div class="forum_card_class">{{class}}</div>
-					<p class="forum_card_op">by {{op}}</p>
+					<p class="forum_card_op">by {{icon}}{{op}}</p>
 				</div></button>
 				{{/each}}
 			</div>
@@ -52,6 +52,7 @@
 	</div>
 
 	<script>
+		/* Refresh page every time upon loading. */
 		$(window).ready (function() {
 			if (performance.navigation.type == 2) {
 				location.reload (true);

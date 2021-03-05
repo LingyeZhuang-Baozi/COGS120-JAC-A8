@@ -32,11 +32,11 @@
 		<!-- Options for specifying question. -->
 		<div class="question_options"><!-- class -->
 			<label for="className">Class:</label>
-			<select class="option_box" id="className" name="className" required>
+			<select class="option_box" id="className" name="className" onchange="getClassReadings($(this).val())" required>
 				<option disabled selected value>
 					--- choose class ----------------------------------------
 				</option>
-				{{#each classname}}
+				{{#each data.classes}}
 				<option value = "{{class}}">{{class}}</option>
 				{{/each}}
 			</select>
@@ -47,8 +47,8 @@
 				<option disabled selected value>
 					--- choose reading --------------------------------------
 				</option>
-				{{#each readings}}
-				<option value = "{{title}}">{{title}}</option>
+				{{#each data.classes.[0].readings}}
+				<option value = "{{reading}}">{{title}}</option>
 				{{/each}}
 			</select>
 		</div>
@@ -63,18 +63,33 @@
 		<div class="question_options" style="margin-bottom:20px"></div>
 		<div style="text-align:center;">
 			<button onclick="goBack()" class="new-question-button" style="width:145px;">↵Cancel</button>
-			<!-- <button onclick="window.location.href='/uploadQ'" class="new-question-button" style="width:145px; margin-left:20%">↑ Post</button> -->
 			<input type="submit" id="submitBtn" class="new-question-button" style="width:145px; margin-left:20%" value="↑ Post"></input>
 		</div></form>
 	</div></div>
 
 	<script>
-		// Disable enter in question input box.
-		$(".enter-question").keypress (function (e) {
+		/* Disable enter in question input box. */
+		$(".enter_question").keypress (function (e) {
+			console.log ($(this));
+			console.log ($(".enter_question"));
 			if (e.which == '13') {
 				e.preventDefault();
 			}
 		})
+
+		/* Dependent menu, get readings according to class chosen. */
+		function getClassReadings (classID) {
+			console.log ("class id: " + classID);
+			/*	For dynamically changing reading data.
+				Still under construction.
+			var classIndex = classID - 1;
+			var replace_code = "<select class='option_box' id='readingName' name='readingName' required><option disabled selected value>--- choose reading --------------------------------------</option>{{#each data.classes.["+classIndex+"].readings}}<option value = '{{readingID}}'>{{title}}</option>{{/each}}</select>";
+			var to_replace = $(document).find("#readingName");
+			console.log (replace_code);
+			console.log (to_replace);
+			$(to_replace).html(replace_code); */
+		}
+
 	</script>
 </body>
 </html>

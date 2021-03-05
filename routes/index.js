@@ -1,8 +1,8 @@
 /*
  * GET home page.
  */
-var class_data = require('../JSON/library_data.json');
+var data = require('../JSON/data.json');
 exports.view = function(req, res){
-  console.log (class_data);  // debug msg
-  res.render("index", class_data);
+  console.log (data.classes);  // debug msg
+  res.render("index", data);
 };

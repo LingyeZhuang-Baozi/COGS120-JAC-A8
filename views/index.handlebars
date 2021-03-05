@@ -21,8 +21,8 @@
 <body>
 <div>
 	<div class="column">
-		{{#each classname}}
-		<div><button onclick="window.location.href='/library'"class = "class-card"><div>
+		{{#each classes}}
+		<div><button onclick="window.location.href='/library?ID={{classID}}'"class = "class-card"><div>
 			<p>{{class}}</p>
 		</div></button></div>
 		{{/each}}

@@ -1,0 +1,251 @@
+{
+  "profile":{
+    "email": "[TODO]",
+    "password": "[TODO]",
+    "name": "me",
+    "icon": "😊"
+  },
+
+
+  "classes": [
+
+    {
+      "class": "COGS 120",
+      "classID": "1",
+      "readings": [
+        {
+          "title": "Participant Observation",
+          "readingID": "1",
+          "upload_method": "[TODO]",
+          "file": "[TODO]"
+        },
+        {
+          "title": "Interviewing",
+          "readingID": "2",
+          "upload_method": "[TODO]",
+          "file": "[TODO]"
+        },
+        {
+          "title": "NeedFinding Strategies",
+          "readingID": "3",
+          "upload_method": "[TODO]",
+          "file": "[TODO]"
+        },
+        {
+          "title" : "Paper Prototypes and Mockups",
+          "readingID": "4",
+          "upload_method": "[TODO]",
+          "file": "[TODO]"
+        },
+        {
+          "title": "Wizard of Oz",
+          "readingID": "5",
+          "upload_method": "[TODO]",
+          "file": "[TODO]"
+        },
+        {
+          "title": "Heuristics Understanding",
+          "readingID": "6",
+          "upload_method": "[TODO]",
+          "file": "[TODO]"
+        },
+        {
+          "title": "Heuristics Evaluation",
+          "readingID": "7",
+          "upload_method": "[TODO]",
+          "file": "[TODO]"
+        },
+        {
+          "title": "Video Prototyping",
+          "readingID": "8",
+          "upload_method": "[TODO]",
+          "file": "[TODO]"
+        }
+      ]
+    },
+
+    {
+      "class": "COGS 100",
+      "classID" : "2",
+      "readings": [
+        {
+          "title": "[TODO]",
+          "readingID": "[TODO]",
+          "upload_method": "[TODO]",
+          "file": "[TODO]"
+        }
+      ]
+    },
+
+    {
+      "class": "COGS 10",
+      "classID": "3",
+      "readings": [
+        {
+          "title": "Smartphones and Cognition",
+          "readingID": "1",
+          "upload_method": "[TODO]",
+          "file": "[TODO]"
+        },
+        {
+          "title": "How Internet has Changed Everyday Life",
+          "readingID": "2",
+          "upload_method": "[TODO]",
+          "file": "[TODO]"
+        },
+        {
+          "title": "How the mysterious dark net is going mainstream",
+          "readingID": "3",
+          "upload_method": "[TODO]",
+          "file": "[TODO]"
+        },
+        {
+          "title": "What defines a meme",
+          "readingID": "4",
+          "upload_method": "[TODO]",
+          "file": "[TODO]"
+        },
+        {
+          "title": "The age of synthesis",
+          "readingID": "5",
+          "upload_method": "[TODO]",
+          "file": "[TODO]"
+        },
+        {
+          "title": "How deepfakes undermine truth and threaten democracy",
+          "readingID": "6",
+          "upload_method": "[TODO]",
+          "file": "[TODO]"
+        },
+        {
+          "title": "Viewpoint: The questionable science behind Elon Musk’s Neuralink brain hacking project",
+          "readingID": "7",
+          "upload_method": "[TODO]",
+          "file": "[TODO]"
+        },
+        {
+          "title": "Human Enhancement",
+          "readingID": "8",
+          "upload_method": "[TODO]",
+          "file": "[TODO]"
+        }
+      ]
+    },
+
+    {
+      "class": "DSGN 1",
+      "classID" : "4",
+      "readings": [
+        {
+          "title": "The Design of Everyday Things",
+          "readingID": "1",
+          "upload_method": "[TODO]",
+          "file": "[TODO]"
+        }
+      ]
+    },
+
+    {
+      "class": "DSGN 100",
+      "classID" : "5",
+      "readings": [
+        {
+          "title": "Lupton on Letter, Text, Grid",
+          "readingID": "1",
+          "upload_method": "[TODO]",
+          "file": "[TODO]"
+        },
+        {
+          "title": "10 Tips for Perfect Poster Design",
+          "readingID": "2",
+          "upload_method": "[TODO]",
+          "file": "[TODO]"
+        },
+        {
+          "title": "Color Theory for Designers",
+          "readingID": "3",
+          "upload_method": "[TODO]",
+          "file": "[TODO]"
+        },
+        {
+          "title": "Digital Ethnography in UX",
+          "readingID": "4",
+          "upload_method": "[TODO]",
+          "file": "[TODO]"
+        },
+        {
+          "title": "Storyboarding in UX Design by Nick Babich",
+          "readingID": "5",
+          "upload_method": "[TODO]",
+          "file": "[TODO]"
+        }
+      ]
+    },
+
+    {
+      "class": "CSE 87",
+      "classID" : "6",
+      "readings": [
+        {
+          "title": "[TODO]",
+          "readingID": "[TODO]",
+          "upload_method": "[TODO]",
+          "file": "[TODO]"
+        }
+      ]
+    }
+
+  ],
+
+
+  "questions": [
+    {
+      "question": "What is the function of css?",
+      "questionID": "1",
+      "class": "COGS 120",
+      "op": "me",
+      "icon": "😊",
+      "reading": "[TODO]",
+      "passage": "[TODO]",
+      "comments": [
+         {
+          "comment": "Here is an example...",
+          "questionID": "[TODO]",
+          "commentID": "[TODO]",
+          "user": "bob",
+          "icon": "🐟"
+        }
+      ]
+    },
+    {
+      "question": "What is the affordance of a door?",
+      "questionID": "2",
+      "class": "DSGN 1",
+      "op": "oof",
+      "icon": "🎀",
+      "reading": "[TODO]",
+      "passage": "[TODO]",
+      "comments": []
+    },
+    {
+      "question": "What is the function of css?",
+      "questionID": "3",
+      "class": "COGS 10",
+      "op": "bob",
+      "icon": "🐟",
+      "reading": "[TODO]",
+      "passage": "[TODO]",
+      "comments": []
+    },
+    {
+      "question": "Can you list some examples of distri...",
+      "questionID": "4",
+      "class": "COGS 100",
+      "op": "me",
+      "icon": "😊",
+      "reading": "[TODO]",
+      "passage": "[TODO]",
+      "comments": []
+    }
+  ]
+}

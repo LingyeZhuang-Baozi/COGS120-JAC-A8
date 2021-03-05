@@ -83,7 +83,7 @@ Participant observations help the researcher decide which questions are relevant
 		}
 		var hlcolor = "#FAFC43";  // default color: yellow
 		var selected_text;
-		function highlighter (e) {  // 
+		function highlighter (e) {
 			console.log("highlighter function");
     		e.preventDefault();  // prevent double operation
 			selected_text = "";
@@ -98,7 +98,8 @@ Participant observations help the researcher decide which questions are relevant
 				range.insertNode(highlighter);
 			}
 			console.log(selected_text.toString());
-		}  // Bug 1: can't erase within highlight. Bug 2: can't highlight when releasing mouse out of text box.
+		}	// Bug 1: can't erase within highlight.
+			// Bug 2: can't highlight when releasing mouse out of text box.
 		function highlight_on_off () {
 			console.log ("toggle highlighter");
 			$(window).toggle (
