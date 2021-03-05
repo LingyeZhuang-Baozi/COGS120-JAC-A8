@@ -27,13 +27,12 @@
 		</div>
 
 		<div class="upload_box">
-		    <div class="box">
-		      <div class="label_text"><label for="url">URL<br></label></div>
-		      <input type="text" id="url" name="url" class="input_box" required>
-		    </div>
-			<div>
-				<button onclick="window.location.href='/upload'" class="upload_button">Confirm</button>
-			</div>
+			<form action="/upload">
+				 <label for="url" class="file_up_text">Enter URL:</label>
+				 <input type="url" id="url" name="url"><br><br>
+				 <button onclick="window.location.href='/upload'" class="upload_button">Back</button>
+				 <input type="submit" class="upload_button">
+			</form>
 		</div>
 	</div>
 </body>

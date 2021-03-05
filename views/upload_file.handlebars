@@ -26,12 +26,12 @@
 		</div>
 
 		<div class="upload_box">	
-			<div>
-				<button class="take_picture">Choose File</button>
-			</div>	
-			<div>
-				<button onclick="window.location.href='/upload'" class="upload_button">Confirm</button>
-			</div>
+			<form id="file_upload" action="/upload">
+				  <label for="myfile" class="file_up_text">Select a file to upload:</label>
+				  <input type="file" id="myfile" name="myfile" class="file_choose"><br><br>
+				  <button onclick="window.location.href='/upload" class="upload_button">Back</button>
+				  <input type="submit" class='submit_button'>
+			</form>
 		</div>
 	</div>
 </body>
