@@ -29,8 +29,9 @@
 				/* TODO: a way to navigate back to the forum page
 				if (window.location.href == "/post") {
 					window.history.back();
-				} */
-  				window.history.go(-2);  // go back twice
+				}
+  				window.history.go(-2);  // go back twic */
+  				window.history.back();
 			}
 		</script>
 		<button onclick="goBack()" class="back-button"><</button>
@@ -72,7 +73,7 @@
 		</div></div>
 
 		<!-- Comment posts. -->
-		{{#each comments}}
+		{{#each comments}}{{#if comment}}
 		<div style="margin-top:100px; border-bottom:1px solid #000000;">
 		<div class="word-content">
 			<p><b>{{icon}}{{user}}:</b></p>
@@ -82,7 +83,7 @@
 			<button id="like" class="like_button">
 				<span class="material-icons"> thumb_up_off_alt </span>
 			</button>
-		</div></div>{{/each}}
+		</div></div>{{/if}}{{/each}}
 	</div>
 </div>
 

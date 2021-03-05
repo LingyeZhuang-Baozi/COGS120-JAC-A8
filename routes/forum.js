@@ -61,7 +61,8 @@ exports.viewPost = function(req, res){
  * Upload new question.
  */
 exports.uploading = function(req, res){
-	console.log("question uploading");  // debug message
+	console.log("question uploading");  // debug msgs
+	console.log (newQuestion);
 
 	/* Construct the question's JSON object */
 	var question = req.query.question;
@@ -92,8 +93,7 @@ exports.uploading = function(req, res){
 
 	/* Push question to database. */
 	data.questions.push(newQuestion);
-	console.log (data.questions);  // debug msg
-	res.render('forum_post', newQuestion);
+	res.render('forum', data);
 };
 
 /*
@@ -108,7 +108,6 @@ exports.commenting = function(req, res){
 	var name = "anonymous";
 	var icon = "📕";
 	if (req.query.showname == "anonymous") {
-		name = "anonymous";
 		if (Math.random() <= 0.25) {
 			icon = "📕";
 		} else if (Math.random() <= 0.5) {
