@@ -123,3 +123,17 @@
   border-radius:10px;
   background: #FFFFFF;
 }
+
+.submit_button{
+  width: 104px;
+  margin-top: 30px;
+  border-radius: 10px;
+  background: #FFFFFF;
+  line-height: 40px;
+  font-size: 20px;
+}
+
+.file_up_text{
+  font-size:large;
+  font-weight:700;
+}
