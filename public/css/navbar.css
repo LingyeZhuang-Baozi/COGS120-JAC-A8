@@ -8,7 +8,7 @@ body {
 	width: 100%;
 	height: 79px;
 	box-shadow: 0 0 3px rbga(0,0,0,0.2);
-	background-color: #CFCFCF;
+	background-color: #93B7BE;
 	display: flex;
 	overflow-x: auto;
 }
@@ -24,14 +24,14 @@ body {
 	white-space: nowrap;
 	font-family: lato;
 	font-size: 25px;
-	color: #000000;
+	color: #554348;
 	text-decoration: none;
 }
 
 
 .nav_bar:hover{
 	/*hover color*/
-	background-color: #eeeeee;
+	background-color: #ECF3EE;
 }
 
 .nav_bar--active{

@@ -23,13 +23,18 @@
   /* need font here */
   font-size: 25px;
   line-height: 30px;
+  width: 200px;
+  height:50px;
   border-radius: 10px;
   border: none;
-  background: #c4c4c4;
+  background: #4A919E;
+  box-shadow: 2px 2px 4px #000000;
+  color: #FFFFFF;
 }
 .new-question-button:hover{
   /*hover color*/
-  background-color: #eeeeee;
+  background-color: #93B7BE;
+  color: #554348;
 }
 
 .forum_card {
@@ -41,7 +46,7 @@
   padding: 15px;
   /* need font here */
   border:none;
-  background: #e4e4e4;
+  background: #ECF3EE;
   border-radius: 8px;
 }
 
@@ -57,11 +62,12 @@
   padding: 5px 15px;
   font-size: 20px;
   line-height: 24px;
-  height: 35px;
+  height: 25px;
   margin-top: 15px;
-  background: #c4c4c4;
+  background: #EBACA2;
   border-radius: 9px;
   float: left;
+  color: #FFFFFF;
 }
 
 .forum_card_op {

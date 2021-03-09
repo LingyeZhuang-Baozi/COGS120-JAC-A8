@@ -18,6 +18,8 @@
 
 .label_text {
   text-align: left;
+  color: #4A919E;
+  font-weight: bold;
 }
 .input_box {
   width: 100%;
@@ -50,11 +52,12 @@
   line-height: 30px;
   border-radius: 25px;
   border: none;
-  background: #C4C4C4;
+  background: #93B7BE;
+  color: #FFFFFF;
 }
 .login_button:hover{
   /*hover color*/
-  background-color: #B2EDF1;
+  background-color: #4A919E;
 }
 
 .bottom_text {

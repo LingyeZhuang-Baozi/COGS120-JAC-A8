@@ -1,6 +1,7 @@
 .upload_reading_text{
   text-align: center;
   margin-top: 25vh;
+  color: #42CAD2;
 }
 
 .upload_box{
@@ -10,8 +11,8 @@
   width: 354px;
   height: 204px;
   padding: 15px;
-  border:none;
-  background: #DADADA;
+  border: #DADADA;
+  background: #ECF3EE;
   border-radius: 10px;
 }
 
@@ -39,9 +40,10 @@
   width: 104px;
   margin-top: 30px;
   border-radius: 10px;
-  background: #FFFFFF;
+  background: #4A919E;
   line-height: 40px;
   font-size: 20px;
+  color: #FFFFFF;
 }
 
 .scan_buttons{
@@ -122,15 +124,6 @@
   height:35;
   border-radius:10px;
   background: #FFFFFF;
-}
-
-.submit_button{
-  width: 104px;
-  margin-top: 30px;
-  border-radius: 10px;
-  background: #FFFFFF;
-  line-height: 40px;
-  font-size: 20px;
 }
 
 .file_up_text{
