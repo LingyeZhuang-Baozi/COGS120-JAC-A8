@@ -8,7 +8,7 @@ exports.view = function(req, res){
 };
 
 exports.url = function(req, res){
-  res.render('upload_url');
+  res.render('upload_url', data);
 };
 
 exports.scan = function(req, res){
@@ -16,7 +16,7 @@ exports.scan = function(req, res){
 };
 
 exports.file = function(req, res){
-  res.render('upload_file');
+  res.render('upload_file', data);
 };
 
 exports.success = function(req, res){

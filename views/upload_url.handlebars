@@ -27,11 +27,20 @@
 		</div>
 
 		<div class="upload_box">
-			<form action="/upload">
+			<form action="/upload_success">
 				 <label for="url" class="file_up_text">Enter URL:</label>
 				 <input type="url" id="url" name="url"><br><br>
+				 
+				<div>
+					<select class = "class-options">
+						{{#each classes}}
+			       		<option value = "class_name">{{class}}</option>
+			        	{{/each}}
+		      		</select>
+				</div>	
+
 				 <button onclick="window.location.href='/upload'" class="upload_button">Back</button>
-				 <input type="submit" class="upload_button">
+				 <input type="submit" class="upload_button" value="Upload">
 			</form>
 		</div>
 	</div>
