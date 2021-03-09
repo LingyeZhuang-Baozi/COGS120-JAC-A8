@@ -19,8 +19,13 @@
 </head>
 
 <body>
+
+<div class="fixed_header_home">
+	<p style = "font-size:25px;text-align:center;">Library</p>
+</div>
+
 <div>
-	<div class="column">
+	<div style="margin:100px auto;"><div class="column">
 		{{#each classes}}
 		<div><button onclick="window.location.href='/library?ID={{classID}}'"class = "class-card"><div>
 			<p>{{class}}</p>
