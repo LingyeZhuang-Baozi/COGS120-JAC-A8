@@ -57,12 +57,14 @@
 	</div>
 
 	<script>
-		/* Refresh page every time upon loading. */
 		$(window).ready (function() {
+			/* Refresh page every time upon loading. */
 			if (performance.navigation.type == 2) {
 				location.reload (true);
 			}
+			/* Redirect to the actual forum coming back from new question. */
 			if (document.location.pathname != "/forum") {
+				console.log ("redirect to actual forum");
 				document.location.replace("/forum");
 			}
 		})
