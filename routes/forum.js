@@ -105,7 +105,7 @@ exports.commenting = function(req, res){
 	var commentText = req.query.commentText;
 	var questionID = req.query.questionID;
 	var commentID = data.questions[questionID-1].comments.length + 1;
-	var name = "anonymous";
+	var name = "";
 	var icon = "📕";
 	if (req.query.showname == "anonymous") {
 		if (Math.random() <= 0.25) {
