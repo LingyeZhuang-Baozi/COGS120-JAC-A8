@@ -15,7 +15,8 @@
 }
 
 .new-question-button-div {
-  margin: 81px auto;
+  margin-top: 80px;
+  margin-left: 20px;
   text-align: center;
 }
 .new-question-button {
