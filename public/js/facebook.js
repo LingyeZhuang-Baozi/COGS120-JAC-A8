@@ -16,6 +16,8 @@ function statusChangeCallback(response) {
         console.log('Successfully logged in with Facebook');
         //FB.api('/me?fields=name,first_name,picture.width(480)', changeUser);
         //FB.api ("/",changeUser);
+        
+        //redirects to library when you login with facebook
         window.location = "/";
   }
 }
