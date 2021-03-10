@@ -15,8 +15,11 @@
 }
 
 .new-question-button-div {
-  margin: 81px auto;
+  margin: auto;
+  padding-top: 15px;
+  padding-bottom: 10px;
   text-align: center;
+  background-color: #FFFFFF;
 }
 .new-question-button {
   padding: 10px;

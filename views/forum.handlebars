@@ -20,14 +20,14 @@
 	<div>
 		<div>
 			<div class="fixed_header_home">
-				<p style = "font-size:25px;text-align:center;">Forum</p>
-			</div>
+				<p style = "margin:0; font-size:25px;text-align:center;">Forum</p>
 
-			<div class="new-question-button-div">
-				<button onclick="window.location.href='forum/question'" class="new-question-button">New Question</button>
+				<div class="new-question-button-div">
+					<button onclick="window.location.href='forum/question'" class="new-question-button">New Question</button>
+				</div>
 			</div>
 			
-			<div style="text-align:center;">
+			<div style="margin:135px auto; text-align:center;">
 				{{#each questions}}
 				<button onclick="window.location.href='/post?ID={{questionID}}'" class="forum_card"><div>
 					<p class="forum_card_title">{{question}}</p>
