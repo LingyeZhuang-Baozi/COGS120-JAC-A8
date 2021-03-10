@@ -23,7 +23,7 @@
 	</div>
 
 	<div style="margin:80px auto;"><div class="question_page">
-		<form id="questionForm" role="form" method="GET" action="/newpost">
+		<form id="questionForm" role="form" onsubmit="window.alert('Question posted! :D\nWaiting for respond.')" method="GET" action="/newpost">
 		<!-- Question enter box. -->
 		<div class="enter_question_div">
 			<textarea class="enter_question" id="question" name="question" placeholder="Enter question" required></textarea>
@@ -62,8 +62,8 @@
 		</div>
 		<div class="question_options" style="margin-bottom:20px"></div>
 		<div style="text-align:center;">
-			<button onclick="goBack()" class="new-question-button" style="width:145px;">↵Cancel</button>
-			<input type="submit" id="submitBtn" class="new-question-button" style="width:145px; margin-left:20%" onclick="window.alert('Question posted! :D\nWaiting for respond.')" value="↑ Post"></input>
+			<button onclick="goBack()" class="new-question-button" style="width:145px; max-width:35%;">Cancel</button>
+			<input type="submit" id="submitBtn" class="new-question-button" style="width:145px; max-width:35%; margin-left:20%" value="↑ Post"></input>
 		</div></form>
 	</div></div>
 
