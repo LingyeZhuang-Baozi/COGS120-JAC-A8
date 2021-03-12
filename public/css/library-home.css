@@ -124,7 +124,7 @@
   	border-radius:50%;
 }
 .hlButton{ /* yellow */
-	margin-top: 10px;
+	margin-top: 32px;
 	width: 29px;
 	height: 29px;
 	border-width: 1px;
@@ -175,8 +175,10 @@
 .forum-icon:hover {
 	color: #888888;
 }
+
+
 .highlight-icon{
-	margin-top: 10px;
+	margin-top: 25px;
 	margin-right:0;
 	border: none;
 	background: none;
