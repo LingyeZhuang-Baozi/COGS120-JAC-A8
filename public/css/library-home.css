@@ -216,20 +216,24 @@
 	background-color: pink;
 	color: black;
 }
-/*.column{
-	float: left;
-	width: 50%;
+.forum-menu{
+	position: absolute;
 	text-align: center;
+	background: lightgray;
+	border:1px solid black;
 }
-//clearing floats
-.row:after{
-	content:"";
-	display:table;
-	clear:both;
+.forum-menu ul{
+	padding:0px;
+	margin:0px;
+	min-width: 150px;
+	list-style: none;
 }
-//making three columns stack on top of each other
-@media screen and (max-width:600px){
-	.column{
-		width:50%;
-	}
-}*/
+.forum-menu ul li{
+	padding-bottom: 7px;
+	padding-top: 7px;
+	border: 1px solid black;
+}
+.forum-menu ul li a{
+	text-decoration: none;
+	color: black;
+}

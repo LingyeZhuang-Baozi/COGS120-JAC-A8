@@ -134,5 +134,36 @@ Participant observations help the researcher decide which questions are relevant
   			//$(this).css('background-color',"#A2FBA4");
 		//});
 	</script>
+	<div id="forumMenu" class="forum-menu" style= "display:none">
+		<ul>
+			<li><a href="../forum/question">Forum</a></li>
+	</div>
+
+	<script>
+		document.onclick = hideMenu;
+		document.oncontextmenu = rightClik;
+
+		function hideMenu() {
+			document.getElementById(
+				"forumMenu").style.display = "none"
+		}
+
+		function rightClik(e){
+			e.preventDefault();
+
+			if(document.getElementById(
+				"forumMenu").style.display == "block")
+				hideMenu();
+			else{
+				var menu = document
+					.getElementById("forumMenu")
+
+				menu.style.display = 'block';
+				menu.style.left = e.pageX + "px";
+				menu.style.top = e.pageY + "px";
+			}
+
+		}
+	</script>
 </body>
 </html>

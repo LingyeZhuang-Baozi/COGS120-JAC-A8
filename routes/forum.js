@@ -133,3 +133,5 @@ exports.commenting = function(req, res){
 	data.questions[questionID-1].comments.push(commentPost);
 	res.render('forum_post', data.questions[questionID-1]);  // update data
 };
+
+/*Saving user text*/
