@@ -12,5 +12,11 @@ Availability: https://www.youtube.com/watch?v=uHL6aeWUEQQ
 Title: How TO - File Upload Button
 Author: w3schools.com
 Code version: HTML
-Availability: https://www.w3schools.com/howto/howto_html_file_upload_button.asp
+Availability: https://www.w3schools.com/howto/howto_html_file_upload_button.asp 
+
+Title: How TO - Dropdown Menu Using HTML and CSS | Simple Coding
+Author: FEW Front End Web
+Code version: HTML and CSS 
+Date: 2020
+Availability: https://www.youtube.com/watch?v=hBusmbz03CU
 
