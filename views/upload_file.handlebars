@@ -21,15 +21,6 @@
 
 <body>
 	<div>
-		<script>
-			function goBack() {
-  				window.history.back();
-			}
-		</script>
-		<button onclick="goBack()" class="back-button"><</button>
-	</div>
-
-	<div>
 		<div class="upload_reading_text">
 			<h2>Upload Reading</h2>
 		</div>
@@ -57,6 +48,23 @@
 
 			</form> 
 		</div>
+
+		<nav class = "navigationbar">
+		<a href="/" class = "nav_bar">
+			<span class="material-icons">import_contacts</span>
+			<span class="navBar_text">Library</span>
+		</a>
+
+		<a href="/upload" class = "nav_bar nav_bar--active">
+			<span class="material-icons">add</span>
+			<span class="navBar_text">Upload</span>
+		</a>
+
+		<a href="/forum" class = "nav_bar">
+			<span class="material-icons">forum</span>
+			<span class="navBar_text">Forum</span>
+		</a>
+	</nav>
 	</div>
 </body>
 </html>
