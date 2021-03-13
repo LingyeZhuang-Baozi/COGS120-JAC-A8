@@ -21,25 +21,40 @@
 
 <body>
 	<div>
+		<script>
+			function goBack() {
+  				window.history.back();
+			}
+		</script>
+		<button onclick="goBack()" class="back-button"><</button>
+	</div>
+
+	<div>
 		<div class="upload_reading_text">
 			<h2>Upload Reading</h2>
 		</div>
 
-		<div class="upload_box">	
-			<form id="file_upload" action="/upload_success">
+		<div class="upload_box">
+			<form action="/upload_success">
 				  <label for="myfile" class="file_up_text">Select a file to upload:</label>
-				  <input type="file" id="myfile" name="myfile" class="file_choose"><br><br>
+				  <input type="file" id="myfile" name="myfile" class="file_choose" required><br><br>
 
-			<div>
-				<select class = "class-options">
-					{{#each classes}}
-			        <option value = "class_name">{{class}}</option>
-			        {{/each}}
-		      	</select>
-			</div>	
+				<div>
+					<select class = "class-options" required>
+						<option disabled selected value>
+						--- choose class ----------------------------------------
+						</option>
+						{{#each classes}}
+				        <option value = "class_name">{{class}}</option>
+				        {{/each}}
+			      	</select>
+				</div>	
 
-				  <button onclick="window.location.href='/upload" class="upload_button">Back</button>
-				  <input type="submit" class="upload_button" value="Upload">
+				<div>
+				  <button onclick="window.location.href='/upload'" class="upload_button">Back</button>
+				  <input type="submit" class="upload_button" value="Upload"/></input>
+				</div>
+
 			</form> 
 		</div>
 	</div>

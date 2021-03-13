@@ -28,9 +28,8 @@
 			<div class = "upload_dropdown">
 				<button class="upload_method">Upload Method</button>
 				<div id = "upload_drop" class = "dropdown_options">
-					<a href="/upload_url">URL</a>
-					<!--<a href="/upload_scan">Scan</a>-->
 					<a href="/upload_file">Upload File</a>
+					<a href="/upload_url">URL</a>
 				</div>
 			</div>
 
@@ -44,6 +43,9 @@
 
 			<div>
 				<select class = "class-options">
+					<option disabled selected value>
+					--- choose class ----------------------------------------
+					</option>
 					{{#each classes}}
 			        <option value = "class_name">{{class}}</option>
 			        {{/each}}
