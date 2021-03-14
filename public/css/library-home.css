@@ -219,8 +219,8 @@
 .forum-menu{
 	position: absolute;
 	text-align: center;
-	background: lightgray;
-	border:1px solid black;
+	background-color: #93B7BE;
+	border: 2px solid #FFFFFF;
 }
 .forum-menu ul{
 	padding:0px;

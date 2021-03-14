@@ -66,10 +66,20 @@ Participant observers integrate themselves into the environment and are often co
 Participant observations help the researcher decide which questions are relevant, what language to use, and what the culture is like. By being a part of the group, Jill can get a better feel of what is important to the research participants. She can also pick up on the language that they use and what certain words mean. If Jill decided to conduct research interviews later, she could use her background knowledge of the participants to help her create research questions.</p>
 	</div>
 	</div>
+
+	<!-- Pop-up forum menu. -->
+	<div id="forumMenu" class="forum-menu" style= "display:none">
+			<button onclick="raiseQuestion()" class="forum-icon">
+				<span class="material-icons">forum</span><br>
+				<span>Forum</span>
+			</button>
+	</div>
+
 	<script>
 		$(document).ready(function() {
 			initializePage();
 		})
+
 		function initializePage(){
 			console.log("initialize page");
 			$("p").mouseup(highlighter);
@@ -77,10 +87,14 @@ Participant observations help the researcher decide which questions are relevant
 			$("p").touchend(highlighter);
 			$("#highlighter").click(highlight_on_off);
 			$(".hlButton").click(highlight_color);
+			document.onclick = hideMenu;
+			document.oncontextmenu = rightClick;
 		}
+
 		function goBack() {
   			window.history.back();
 		}
+
 		var hlcolor = "#FAFC43";  // default color: yellow
 		var selected_text;
 		function highlighter (e) {
@@ -133,6 +147,7 @@ Participant observations help the researcher decide which questions are relevant
 		//$("p").click(function() {
   			//$(this).css('background-color',"#A2FBA4");
 		//});
+<<<<<<< HEAD
 
 	//Right click forum button
 	</script>
@@ -145,14 +160,16 @@ Participant observations help the researcher decide which questions are relevant
 	<script>
 		document.onclick = hideMenu;
 		document.oncontextmenu = rightClik;
+=======
+>>>>>>> ed980af8ee733d0ff0cb7690dfacf27ca666e081
 
-		function hideMenu() {
+		function hideMenu () {
 			document.getElementById(
 				"forumMenu").style.display = "none"
 		}
-
-		function rightClik(e){
+		function rightClick (e){
 			e.preventDefault();
+			console.log(selected_text.toString());
 
 			if(document.getElementById(
 				"forumMenu").style.display == "block")
@@ -166,6 +183,14 @@ Participant observations help the researcher decide which questions are relevant
 				menu.style.top = e.pageY + "px";
 			}
 
+		}
+
+		function raiseQuestion () {
+			if (selected_text.toString().length != 0) {
+				window.location.href="../forum/question?text="+selected_text.toString();
+			} else {
+				window.location.href="../forum/question";
+			}
 		}
 	</script>
 </body>
