@@ -8,6 +8,45 @@
 	<!--<link href="../css/bootstrap.css" rel="stylesheet">
 	<link href="../css/bootstrap-theme.css" rel="stylesheet">-->
 	<link href="../css/forum.css" rel="stylesheet">
+
+	<script>
+	function populate(s1,s2){
+	var s1 = document.getElementById(s1);
+	var s2 = document.getElementById(s2);
+	s2.innerHTML = "";
+	if(s1.value == "COGS 120"){
+		var optionArray = ["|","Participant Observation|Participant Observation", "Wizard of Oz|Wizard of Oz","Interviewing|Interviewing", "Heuristics Understanding|Heuristics Understanding", "NeedFinding Strategies|NeedFinding Strategies", "Heuristics Evaluation|Heuristics Evaluation", "Paper Prototypes and Mockups|Paper Prototypes and Mockups", "Video Prototyping|Video Prototyping"];
+	}
+	else if(s1.value == "DSGN 1"){
+		var optionArray = ["|","The Design of Everyday Things|The Design of Everyday Things"];
+	} 
+
+	else if(s1.value == "COGS 100"){
+		var optionArray = ["|","[TODO]|[TODO]"];
+	}
+
+	else if(s1.value == "DSGN 100"){
+		var optionArray = ["|","Lupton on Letter, Text, Grid|Lupton on Letter, Text, Grid", "10 Tips for Perfect Poster Design|10 Tips for Perfect Poster Design", "Color Theory for Designers|Color Theory for Designers", "Digital Ethnography in UX|Digital Ethnography in UX", "Storyboarding in UX Design by Nick Babich|Storyboarding in UX Design by Nick Babich"];
+	}
+
+	else if(s1.value == "COGS 10"){
+		var optionArray = ["|","Smartphones and Cognition|Smartphones and Cognition", "How Internet has Changed Everyday Life|How Internet has Changed Everyday Life", "How the mysterious dark net is going mainstream|How the mysterious dark net is going mainstream", "What defines a meme|What defines a meme", "The age of synthesis|The age of synthesis", "How deepfakes undermine truth and threaten democracy|How deepfakes undermine truth and threaten democracy", "Viewpoint: The questionable science behind Elon Musk’s Neuralink brain hacking project|Viewpoint: The questionable science behind Elon Musk’s Neuralink brain hacking project","Human Enhancement|Human Enhancement"];
+		}
+
+	else if(s1.value == "CSE 87"){
+		var optionArray = ["|","[TODO]|[TODO]"];
+	}
+
+	for(var option in optionArray){
+		var pair = optionArray[option].split("|");
+		var newOption = document.createElement("option");
+		newOption.value = pair[0];
+		newOption.innerHTML = pair[1];
+		s2.options.add(newOption);
+	}
+} 
+	</script>
+
 </head>
 
 <body>
@@ -32,8 +71,8 @@
 		<!-- Options for specifying question. -->
 		<div class="question_options"><!-- class -->
 			<label for="className">Class:</label>
-			<select class="option_box" id="className" name="className" onchange="getClassReadings($(this).val())" required>
-				<option disabled selected value>
+			<select id="className" name="className" onchange="populate(this.id,'readingName')" class="option_box">
+				  <option disabled selected value>
 					--- choose class ----------------------------------------
 				</option>
 				{{#each data.classes}}
@@ -41,15 +80,15 @@
 				{{/each}}
 			</select>
 		</div>
-		<div class="question_options"><!-- reading title -->
+
+
+		<div class="question_options">
+			<!-- reading title -->
 			<label for="className">Reading:</label>
-			<select class="option_box" id="readingName" name="readingName" required>
+			<select id="readingName" name="readingName" class="option_box"> 
 				<option disabled selected value>
 					--- choose reading --------------------------------------
 				</option>
-				{{#each data.classes.[0].readings}}
-				<option value = "{{reading}}">{{title}}</option>
-				{{/each}}
 			</select>
 		</div>
 		<div class="question_options"><!-- attatched passage -->
@@ -72,19 +111,6 @@
 				e.preventDefault();
 			}
 		})
-
-		/* Dependent menu, get readings according to class chosen. */
-		function getClassReadings (classID) {
-			console.log ("class id: " + classID);
-			/*	For dynamically changing reading data.
-				Still under construction.
-			var classIndex = classID - 1;
-			var replace_code = "<select class='option_box' id='readingName' name='readingName' required><option disabled selected value>--- choose reading --------------------------------------</option>{{#each data.classes.["+classIndex+"].readings}}<option value = '{{readingID}}'>{{title}}</option>{{/each}}</select>";
-			var to_replace = $(document).find("#readingName");
-			console.log (replace_code);
-			console.log (to_replace);
-			$(to_replace).html(replace_code); */
-		}
 
 	</script>
 </body>

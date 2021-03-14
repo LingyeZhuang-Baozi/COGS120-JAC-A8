@@ -31,8 +31,8 @@ Author: w3schools.com
 Code version: HTML
 Availability: https://www.w3schools.com/tags/tag_option.asp
 
-Title: 
-Author: 
-Code version:
-Date: 
-Availability: 
+Title: Javascript Form Select Change Options Tutorial Dynamic List Elements HTML5
+Author: Adam Khoury
+Code version: HTML5
+Date: Sep 8, 2012
+Availability: https://www.youtube.com/watch?v=UliJeDbc4cw
