@@ -36,7 +36,7 @@
 			<button id="color3" class="hlButton hlcolor3"></button>
 			<button id="color0" class="hlButton hlcolor0" style="padding:0;"><p class="material-icons" style="margin:auto;">block</p></button>
 			<!-- Forum button. -->
-			<button onclick="window.location.href='../forum/question'" class="forum-icon">
+			<button class="forum-icon">
 				<span class="material-icons">forum</span><br>
 				<span>Forum</span>
 			</button>
@@ -69,13 +69,16 @@ Participant observations help the researcher decide which questions are relevant
 
 	<!-- Pop-up forum menu. -->
 	<div id="forumMenu" class="forum-menu" style= "display:none">
-			<button onclick="raiseQuestion()" class="forum-icon">
+			<button class="forum-icon">
 				<span class="material-icons">forum</span><br>
 				<span>Forum</span>
 			</button>
 	</div>
 
 	<script>
+		var hlcolor = "#FAFC43";  // default color: yellow
+		var selected_text = "";
+
 		$(document).ready(function() {
 			initializePage();
 		})
@@ -89,14 +92,13 @@ Participant observations help the researcher decide which questions are relevant
 			$(".hlButton").click(highlight_color);
 			document.onclick = hideMenu;
 			document.oncontextmenu = rightClick;
+			$(".forum-icon").click (raiseQuestion);
 		}
 
 		function goBack() {
   			window.history.back();
 		}
 
-		var hlcolor = "#FAFC43";  // default color: yellow
-		var selected_text;
 		function highlighter (e) {
 			console.log("highlighter function");
     		e.preventDefault();  // prevent double operation
