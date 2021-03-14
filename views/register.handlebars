@@ -48,8 +48,15 @@
 		      <!-- TODO: check whether it is the same password. -->
 		    </div>
 		    <div class="box">
-		      <input type="text" name="find_school" class="search_box" placeholder="my school">
-		      <button class="material-icons search_button">search</button>
+		    	<input list="browsers" name="school_browser" id="school_browser" placeholder="my school" class="search_box" required>
+		    	<datalist id="browsers">
+		    		<option value="University of California, San Diego">
+		    	</datalist>
+
+
+		    <!--original input-->
+		      <!--<input type="text" name="find_school" class="search_box" placeholder="my school">-->
+		      <!--<button class="material-icons search_button">search</button>-->
 		    </div>
 			<input type="submit" id="submitBtn" class="login_button" value="Register"></input>
 		</form>

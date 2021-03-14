@@ -37,11 +37,10 @@
   border-radius: 0;
 }
 .search_box {
-  width: calc(100% - 50px);
+  width: 100%;
   height: 30px;
   padding: 5px;
   border-radius: 0;
-  border-right: none;
 }
 
 .login_button {
