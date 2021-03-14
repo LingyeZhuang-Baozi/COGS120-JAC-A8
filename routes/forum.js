@@ -32,18 +32,26 @@ exports.question = function(req, res){
 	console.log ("inputting new question");  // debug msg
 
 	/* Get and set default class and reading info */
-	var ID = -1;  // initialize variable
+	var ID = false;  // initialize variable
 	if (req.query.ID) {  // [classID, readingID]
-		var ID = req.query.classID;
-		/*var classID = ID[0];
+		ID = req.query.ID;
+		var classID = ID[0];
 		var readingID = ID[1];
 		ID = {
 			"classID": classID,
 			"readingID": readingID
-		}*/
+		}
 	}
-	console.log({"ID": ID, "data": data});
-	res.render('forum_question', {"ID": ID, "data": data});  // for setting default
+	// Selected passage.
+	var selected_text = "";
+	if (req.query.text) {
+		selected_text = req.query.text;
+	}
+
+	// Construct data to render.
+	var question_data = {"ID": ID, "data": data, "passage": selected_text};
+	console.log(question_data);
+	res.render('forum_question', question_data);  // for setting default
 };
 
 /*
