@@ -7,6 +7,7 @@
 	<meta name="viewport" content="width=device-width, intitial-scale=1.0">
 	<script src="js/jquery-1.11.0.js"></script>
 	<script src="js/bootstrap.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 	{{> facebook}}
 	<script src="../js/facebook.js"></script>
 	<!--<link href="css/bootstrap.css" rel="stylesheet">
@@ -17,6 +18,7 @@
 	<link href="css/upload.css" rel="stylesheet">
 	<link href="css/login-register.css" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+
 
 	<!-- /Added -->
 
@@ -52,7 +54,16 @@
 		    	<datalist id="browsers">
 		    		<option value="University of California, San Diego">
 		    	</datalist>
-
+		    
+		    <!--<script>
+		    	$("select").on("change",function(){
+		    		$(this).nextAll("input, label".remove());
+		    		if($(this).prop("value")== "University of California, San Diego"){
+		    			$(this).after("</br></br><label for='class'>Class you enrolled in:</label>" + "<p>COGS 120, DSGN 1, COGS 100, DSGN 100, COGS 10, CSE87</p>");
+		    		}
+		    	});
+		    </script>-->
+		    	
 
 		    <!--original input-->
 		      <!--<input type="text" name="find_school" class="search_box" placeholder="my school">-->
