@@ -108,15 +108,19 @@ Participant observations help the researcher decide which questions are relevant
 			if (window.getSelection().toString() != "") {
 				selected_text = window.getSelection();
 				var range = selected_text.getRangeAt(0);
-				var content = document.createTextNode(selected_text.toString());
-				var highlighter = document.createElement("span");
-				highlighter.style.backgroundColor = hlcolor;
-				range.extractContents();
-				highlighter.appendChild(content);
-				range.insertNode(highlighter);
-				console.log ("erasor: " + erasor);
-				if (erasor == true) {
-					selected_text = "";
+
+				// Highlight if highlighter is on.
+				if (hlcolor != "") {
+					var content = document.createTextNode(selected_text.toString());
+					var highlighter = document.createElement("span");
+					highlighter.style.backgroundColor = hlcolor;
+					range.extractContents();
+					highlighter.appendChild(content);
+					range.insertNode(highlighter);
+					console.log ("erasor: " + erasor);
+					if (erasor == true) {
+						selected_text = "";
+					}
 				}
 			}
 			console.log(selected_text.toString());
