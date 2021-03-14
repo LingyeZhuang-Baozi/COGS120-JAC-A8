@@ -76,8 +76,11 @@ Participant observations help the researcher decide which questions are relevant
 	</div>
 
 	<script>
-		var hlcolor = "#FAFC43";  // default color: yellow
-		var selected_text = "";
+		var hlcolor = "";  // Default: highlighter off.
+		var chosen_id = "";
+		var erasor = false;
+
+		var selected_text = "";  // Default: no text chosen.
 
 		$(document).ready(function() {
 			initializePage();
@@ -88,7 +91,6 @@ Participant observations help the researcher decide which questions are relevant
 			$("p").mouseup(highlighter);
 			/* ↓ Touch screen trial. */
 			$("p").touchend(highlighter);
-			$("#highlighter").click(highlight_on_off);
 			$(".hlButton").click(highlight_color);
 			document.onclick = hideMenu;
 			document.oncontextmenu = rightClick;
@@ -112,43 +114,61 @@ Participant observations help the researcher decide which questions are relevant
 				range.extractContents();
 				highlighter.appendChild(content);
 				range.insertNode(highlighter);
+				console.log ("erasor: " + erasor);
+				if (erasor == true) {
+					selected_text = "";
+				}
 			}
 			console.log(selected_text.toString());
 		}	// Bug 1: can't erase within highlight.
 			// Bug 2: can't highlight when releasing mouse out of text box.
-		function highlight_on_off () {
-			console.log ("toggle highlighter");
-			$(window).toggle (
-				function() {
-					$(".hlButtom").css("border-width: 1px;");
-					$(this).css("color: #35C6CF;")
-					$(this).closest(".hlcolor1").css("border-width: 3px;");
-				},
-				function() {
-					$(".hlButtom").css("border-width: 0;");
-				}
-			)
-		}
 		function highlight_color (color) {
-			$(".hlButtom").css("border-width: 1px;");
-			$(this).css("border-width: 3px;");
-			if ($(this).attr("id") == "color1") {
+			$(".hlButton").css("border-width", "1px");
+			$(".hlButton").css("border-color", "#000000");
+
+			// Double click to cancel.
+			if (chosen_id == $(this).attr("id")) {
+				console.log ("cancel highlighter");
+				chosen_id = "";
+				hlcolor = "";
+				return;
+			}
+
+			// Signify highlighter chosen.
+			chosen_id = $(this).attr("id");
+			var hash_chosen_id = "#" + chosen_id;
+			$($(hash_chosen_id)).css("border-width", "2px");
+			$($(hash_chosen_id)).css("border-color", "#FFFFFF");
+
+			// Set highlighter color.
+			if (chosen_id == "color1") {
 				console.log ("highlighter set color yellow");
 				hlcolor = "#FAFC43";
-			} else if ($(this).attr("id") == "color2") {
+				erasor = false;
+			} else if (chosen_id == "color2") {
 				console.log ("highlighter set color blue");
 				hlcolor = "#B3E9FA";
-			} else if ($(this).attr("id") == "color3") {
+				erasor = false;
+			} else if (chosen_id == "color3") {
 				console.log ("highlighter set color green");
 				hlcolor = "#A2FBA4";
-			} else if ($(this).attr("id") == "color0") {
+				erasor = false;
+			} else if (chosen_id == "color0") {
 				console.log ("highlighter set eraser");
 				hlcolor = "none";
+				erasor = true;
 			}
 		}
-		//$("p").click(function() {
-  			//$(this).css('background-color',"#A2FBA4");
-		//});
+		/*$(".like_button").click(function(){
+			var icon = $(this).closest("div").find(".material-icons");
+			if (icon.text() == "thumb_up_off_alt") {
+				console.log("like button clicked - LIKE");  // debug msg
+				$(icon).text ("thumb_up");
+			} else {
+				console.log("like button clicked - UNDO");  // debug msg
+				$(icon).text ("thumb_up_off_alt");
+			}
+		})*/
 
 		function hideMenu () {
 			document.getElementById(
